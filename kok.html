@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Hello World</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="kok.css">
+</head>
+<body>
+ 	<ul>
+		<li><p>a: <input id="a"></p></li>
+		<li><p>b: <input id="b"></p></li>
+		<li><p>c: <input id="c"></p></li>
+	</ul>
+
+	<button id="get">Get Answers</button>
+ 
+	
+	<div id="otr"></div>
+	<div id="oo"></div>
+	<div id="full"></div>
+ 
+	<script>
+		function get_answer() {
+    		var a = document.getElementById('a').value;
+ 			var b = document.getElementById('b').value;
+    		var c = document.getElementById('c').value;
+
+    		var D = (b * b) - (4 * a * c ); 
+    	if ( D < 0 ){
+    	 	var otr =  'D = ' + D + ' Нет корней! ';
+    	 	document.getElementById('otr').innerHTML = otr;
+    	}
+    	if ( D == 0) {
+    		var x1 = (-1 * b) / (2 * a);
+    		var oo = 'D = ' + D + ' So the answer is ' + x1;
+    		document.getElementById('oo').innerHTML = oo;
+    	}
+    	if (D > 0) {
+    		var x1 = (-1 * b - Math.sqrt(D)) / (2 * a);
+    		var x2 = (-1 * b + Math.sqrt(D)) / (2 * a);
+    		var full = 'D = ' + D + ' So the answers are' + x1 + ' and ' + x2;
+    		document.getElementById('full').innerHTML = full;
+    	}
+ 	
+    var html = 'Hello <b>' + D + '</b> ' + b;
+ 
+    
+	}
+ 
+		document.getElementById('get').addEventListener('click', get_answer);
+</script>
+ 
+</body>
+</html>
