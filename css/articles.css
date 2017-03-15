@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-    background: url(../../mathSite/pic/images.jpg) no-repeat center center fixed; 
+    background: url(../pic/images.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -52,7 +52,7 @@ header h1 {
   .formulOfX {
     text-align: center;
   }
-  
+
 @media (min-width: 992px) {
   header {
     padding: 20px 0;
